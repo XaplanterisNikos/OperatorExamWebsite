@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://operator-exam-quiz.web.app/sitemap.xml
