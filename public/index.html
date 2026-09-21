@@ -1,89 +1,353 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="el">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.19.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.19.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <title>
+      Χειριστής Μηχανημάτων Έργου – Ερωτήσεις & Προετοιμασία Εξετάσεων
+    </title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <meta
+      name="description"
+      content="Operator Exam Quiz: εφαρμογή προετοιμασίας για τις θεωρητικές εξετάσεις χειριστών μηχανημάτων έργου. 448 ερωτήσεις, 15 κεφάλαια και προσομοίωση τελικής εξέτασης."
+    />
+
+    <meta
+      name="keywords"
+      content="χειριστής μηχανημάτων έργου, εξετάσεις χειριστών, ερωτήσεις χειριστών, μηχανήματα έργου, προετοιμασία εξετάσεων, Operator Exam Quiz"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <header class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <img
+            src="images/icon.png"
+            alt="Operator Exam Quiz"
+            class="app-icon"
+          />
+
+          <p class="eyebrow">OPERATOR EXAM QUIZ</p>
+
+          <h1>
+            Προετοιμάσου για τις εξετάσεις
+            <span>Χειριστή Μηχανημάτων Έργου</span>
+          </h1>
+
+          <p class="hero-description">
+            Μια εφαρμογή Android για εξάσκηση στη θεωρία και προετοιμασία για
+            τις εξετάσεις χειριστών μηχανημάτων έργου.
+          </p>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz"
+            target="_blank"
+            rel="noopener"
+            class="play-button"
+          >
+            Λήψη από Google Play
+          </a>
+        </div>
+
+        <div class="hero-image">
+          <img src="images/banner.png" alt="Operator Exam Quiz εφαρμογή" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ΤΙ ΠΕΡΙΛΑΜΒΑΝΕΙ</p>
+
+            <h2>Όλα όσα χρειάζεσαι για την εξάσκησή σου</h2>
+
+            <p>
+              Η εφαρμογή συγκεντρώνει την ύλη σε οργανωμένα κεφάλαια και σου
+              επιτρέπει να εξασκηθείς τόσο σε μεμονωμένες ερωτήσεις όσο και σε
+              ολοκληρωμένη προσομοίωση εξέτασης.
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="feature">
+              <h3>448 ερωτήσεις</h3>
+              <p>Μεγάλη βάση ερωτήσεων για συστηματική εξάσκηση στη θεωρία.</p>
+            </article>
+
+            <article class="feature">
+              <h3>15 κεφάλαια</h3>
+              <p>
+                Η ύλη είναι οργανωμένη σε 15 θεματικά κεφάλαια για πιο εύκολη
+                μελέτη.
+              </p>
+            </article>
+
+            <article class="feature">
+              <h3>Offline λειτουργία</h3>
+              <p>
+                Η εφαρμογή λειτουργεί χωρίς σύνδεση στο Internet. Δεν απαιτείται
+                API ή λογαριασμός για τη χρήση της.
+              </p>
+            </article>
+
+            <article class="feature">
+              <h3>Δωρεάν & χωρίς διαφημίσεις</h3>
+              <p>
+                Η εφαρμογή διατίθεται δωρεάν και δεν περιλαμβάνει διαφημίσεις.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section exam-section">
+        <div class="container">
+          <div class="exam-content">
+            <div>
+              <p class="eyebrow">FINAL EXAM</p>
+
+              <h2>Προσομοίωση τελικής εξέτασης</h2>
+
+              <p>
+                Δοκίμασε τις γνώσεις σου σε μια ολοκληρωμένη προσομοίωση
+                εξέτασης με χρονικό περιορισμό.
+              </p>
+            </div>
+
+            <div class="exam-stats">
+              <div>
+                <strong>80</strong>
+                <span>Ερωτήσεις</span>
+              </div>
+
+              <div>
+                <strong>90'</strong>
+                <span>Χρόνος</span>
+              </div>
+
+              <div>
+                <strong>75%</strong>
+                <span>Όριο επιτυχίας</span>
+              </div>
+
+              <div>
+                <strong>60/80</strong>
+                <span>Σωστές απαντήσεις</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exam-details">
+            <p>
+              Οι ερωτήσεις μπορούν να έχουν μία ή περισσότερες σωστές
+              απαντήσεις. Κατά τη διάρκεια της εξέτασης μπορείς να περιηγείσαι
+              στις ερωτήσεις και να επανεξετάζεις τις απαντήσεις σου.
+            </p>
+
+            <p>
+              Η κατάσταση της εξέτασης διατηρείται ακόμη και αν η εφαρμογή
+              μεταφερθεί στο παρασκήνιο ή κλειδώσει η οθόνη.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section screenshots-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ΜΕΣΑ ΑΠΟ ΤΗΝ ΕΦΑΡΜΟΓΗ</p>
+
+            <h2>Δες την εφαρμογή</h2>
+
+            <p>
+              Περιηγήσου στο περιβάλλον της εφαρμογής και δες πώς οργανώνεται η
+              εξάσκηση και η εξέταση.
+            </p>
+          </div>
+
+          <div class="screenshots">
+            <img
+              src="images/screen1.png"
+              alt="Operator Exam Quiz - οθόνη εφαρμογής"
+            />
+
+            <img
+              src="images/screen2.png"
+              alt="Operator Exam Quiz - οθόνη εξέτασης"
+            />
+
+            <img
+              src="images/screen3.png"
+              alt="Operator Exam Quiz - οθόνη ερωτήσεων"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section audience-section">
+        <div class="container narrow">
+          <p class="eyebrow">ΓΙΑ ΠΟΙΟΝ ΕΙΝΑΙ</p>
+
+          <h2>Για υποψήφιους χειριστές μηχανημάτων έργου</h2>
+
+          <p>
+            Το Operator Exam Quiz δημιουργήθηκε για όσους θέλουν να εξασκηθούν
+            στη θεωρητική ύλη και να ελέγξουν την ετοιμότητά τους πριν από τις
+            εξετάσεις.
+          </p>
+
+          <p>
+            Μπορείς να μελετήσεις ανά κεφάλαιο, να απαντήσεις ερωτήσεις και να
+            χρησιμοποιήσεις το Final Exam για να προσομοιώσεις μια ολοκληρωμένη
+            εξέταση.
+          </p>
+        </div>
+      </section>
+
+      <section class="section creator-section">
+        <div class="container narrow">
+          <p class="eyebrow">ΣΧΕΤΙΚΑ ΜΕ ΤΟΝ ΔΗΜΙΟΥΡΓΟ</p>
+
+          <h2>Νίκος Ξαπλαντέρης</h2>
+
+          <p>
+            Το Operator Exam Quiz δημιουργήθηκε από τον Νίκο Ξαπλαντέρη,
+            software developer με προηγούμενη επαγγελματική εμπειρία ως
+            χειριστής μηχανημάτων έργου.
+          </p>
+
+          <p>
+            Η εφαρμογή δημιουργήθηκε με στόχο να προσφέρει ένα πρακτικό και
+            εύχρηστο εργαλείο εξάσκησης για όσους προετοιμάζονται για τις
+            θεωρητικές εξετάσεις χειριστών μηχανημάτων έργου.
+          </p>
+        </div>
+      </section>
+
+      <section class="section faq-section">
+        <div class="container narrow">
+          <p class="eyebrow">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</p>
+
+          <h2>Συχνές ερωτήσεις</h2>
+
+          <div class="faq">
+            <details>
+              <summary>Η εφαρμογή είναι δωρεάν;</summary>
+              <p>
+                Ναι. Το Operator Exam Quiz διατίθεται δωρεάν και δεν
+                περιλαμβάνει διαφημίσεις.
+              </p>
+            </details>
+
+            <details>
+              <summary>Χρειάζεται σύνδεση στο Internet;</summary>
+              <p>Όχι. Η εφαρμογή μπορεί να χρησιμοποιηθεί offline.</p>
+            </details>
+
+            <details>
+              <summary>Πόσες ερωτήσεις περιλαμβάνει;</summary>
+              <p>
+                Η εφαρμογή περιλαμβάνει 448 ερωτήσεις οργανωμένες σε 15
+                κεφάλαια.
+              </p>
+            </details>
+
+            <details>
+              <summary>Πόσες ερωτήσεις έχει το Final Exam;</summary>
+              <p>
+                Το Final Exam περιλαμβάνει 80 ερωτήσεις και έχει χρονικό όριο 90
+                λεπτών.
+              </p>
+            </details>
+
+            <details>
+              <summary>Ποιο είναι το όριο επιτυχίας;</summary>
+              <p>
+                Για την ολοκλήρωση του Final Exam απαιτούνται τουλάχιστον 60
+                σωστές απαντήσεις στις 80, δηλαδή 75%.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="download-section">
+        <div class="container">
+          <h2>Ξεκίνα την προετοιμασία σου</h2>
+
+          <p>Κατέβασε δωρεάν το Operator Exam Quiz από το Google Play.</p>
+
+          <a
+            href="https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz"
+            target="_blank"
+            rel="noopener"
+            class="play-button"
+          >
+            Λήψη από Google Play
+          </a>
+        </div>
+      </section>
+    </main>
+
+   <footer>
+
+    <div class="container footer-content">
+
+        <div>
+            <strong>Operator Exam Quiz</strong>
+
+            <p>
+                Εφαρμογή προετοιμασίας για θεωρητικές εξετάσεις
+                χειριστών μηχανημάτων έργου.
+            </p>
+
+            <p>
+                Δημιουργός: Νίκος Ξαπλαντέρης
+            </p>
+        </div>
+
+        <div class="footer-links">
+
+            <a
+                href="mailto:xaplanterisnikos@gmail.com">
+                Email
+            </a>
+
+            <a
+                href="https://github.com/XaplanterisNikos/xaplanterisnikos.github.io"
+                target="_blank"
+                rel="noopener">
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/nick-xaplanteris/"
+                target="_blank"
+                rel="noopener">
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/XaplanterisNikos/operator-exam-quiz"
+                target="_blank"
+                rel="noopener">
+                App GitHub Repository
+            </a>
+
+        </div>
+
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div class="copyright">
+        © 2026 Νίκος Ξαπλαντέρης · Operator Exam Quiz
+    </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+</footer>
   </body>
 </html>
