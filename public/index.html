@@ -4,31 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Χειριστής Μηχανημάτων Έργου – Ερωτήσεις & Προετοιμασία Εξετάσεων
-    </title>
+    <!-- Title: keep under ~60 chars; Greek keywords people actually search for ("ερωτήσεις", "τεστ") -->
+    <title>Χειριστής Μηχανημάτων Έργου – Ερωτήσεις & Τεστ Εξετάσεων</title>
 
+    <!-- Description: shown as the snippet under the title in Google results (~155 chars) -->
     <meta
       name="description"
-      content="Operator Exam Quiz: εφαρμογή προετοιμασίας για τις θεωρητικές εξετάσεις χειριστών μηχανημάτων έργου. 448 ερωτήσεις, 15 κεφάλαια και προσομοίωση τελικής εξέτασης."
+      content="Δωρεάν εφαρμογή για τις θεωρητικές εξετάσεις χειριστών μηχανημάτων έργου: 448 ερωτήσεις σε 15 κεφάλαια και τελικό τεστ 80 ερωτήσεων σε 90 λεπτά."
     />
 
+    <!-- Canonical: Firebase also serves the site on *.firebaseapp.com; this tells Google which URL is the real one -->
+    <link rel="canonical" href="https://operator-exam-quiz.web.app/" />
+
+    <!-- Icons and browser UI color. Root-relative paths ("/...") so they keep working from sub-pages and the 404 page -->
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <link rel="apple-touch-icon" href="/images/icon.png" />
+    <meta name="theme-color" content="#172033" />
+
+    <!-- Open Graph: controls the preview card on Facebook, Viber, LinkedIn, Messenger -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="el_GR" />
+    <meta property="og:site_name" content="Operator Exam Quiz" />
+    <meta property="og:url" content="https://operator-exam-quiz.web.app/" />
+    <meta property="og:title" content="Χειριστής Μηχανημάτων Έργου – Ερωτήσεις & Τεστ Εξετάσεων" />
     <meta
-      name="keywords"
-      content="χειριστής μηχανημάτων έργου, εξετάσεις χειριστών, ερωτήσεις χειριστών, μηχανήματα έργου, προετοιμασία εξετάσεων, Operator Exam Quiz"
+      property="og:description"
+      content="Δωρεάν εφαρμογή Android με 448 ερωτήσεις σε 15 κεφάλαια και προσομοίωση τελικού τεστ για τις εξετάσεις χειριστών."
     />
-    <link rel="icon" type="image/png" href="images/icon.png" />
-    <link rel="stylesheet" href="style.css" />
+    <meta property="og:image" content="https://operator-exam-quiz.web.app/images/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Operator Exam Quiz – Χειριστής Μηχανημάτων Έργου" />
+
+    <!-- Twitter / X card (falls back to the Open Graph values above) -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Cache-busting query string: bump the version whenever style.css changes -->
+    <link rel="stylesheet" href="/style.css?v=3" />
+
+    <!--
+      Structured data (schema.org JSON-LD). Tells Google this page is about a free
+      Android app, who made it and which language it is in.
+      JSON does not allow comments, so all notes live here:
+      - @graph links three entities by @id: the website, the app and its author.
+      - offers.price "0" marks the app as free.
+      - Do NOT add aggregateRating unless it mirrors the real Play Store rating.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://operator-exam-quiz.web.app/#website",
+            "url": "https://operator-exam-quiz.web.app/",
+            "name": "Operator Exam Quiz",
+            "inLanguage": "el"
+          },
+          {
+            "@type": "MobileApplication",
+            "@id": "https://operator-exam-quiz.web.app/#app",
+            "name": "Operator Exam Quiz",
+            "alternateName": "Εξάσκηση Χειριστών Μηχανημάτων",
+            "description": "Εφαρμογή προετοιμασίας για τις θεωρητικές εξετάσεις χειριστών μηχανημάτων έργου με 448 ερωτήσεις σε 15 κεφάλαια και προσομοίωση τελικού τεστ.",
+            "operatingSystem": "Android",
+            "applicationCategory": "EducationalApplication",
+            "inLanguage": "el",
+            "url": "https://operator-exam-quiz.web.app/",
+            "installUrl": "https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz",
+            "image": "https://operator-exam-quiz.web.app/images/icon.png",
+            "screenshot": [
+              "https://operator-exam-quiz.web.app/images/screen1.png",
+              "https://operator-exam-quiz.web.app/images/screen2.png",
+              "https://operator-exam-quiz.web.app/images/screen3.png"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR"
+            },
+            "author": { "@id": "https://operator-exam-quiz.web.app/#creator" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://operator-exam-quiz.web.app/#creator",
+            "name": "Νίκος Ξαπλαντέρης",
+            "alternateName": "Nikos Xaplanteris",
+            "jobTitle": "Software Developer",
+            "sameAs": [
+              "https://www.linkedin.com/in/nick-xaplanteris/",
+              "https://github.com/XaplanterisNikos"
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <header class="hero">
       <div class="container hero-content">
         <div class="hero-text">
+          <!-- Explicit width/height let the browser reserve space and avoid layout shift (Core Web Vitals: CLS) -->
           <img
-            src="images/icon.png"
-            alt="Operator Exam Quiz"
+            src="/images/icon.png"
+            alt="Εικονίδιο της εφαρμογής Operator Exam Quiz"
             class="app-icon"
+            width="512"
+            height="512"
           />
 
           <p class="eyebrow">OPERATOR EXAM QUIZ</p>
@@ -43,18 +126,28 @@
             τις εξετάσεις χειριστών μηχανημάτων έργου.
           </p>
 
+          <!-- referrer=utm_*: lets Play Console attribute installs to this button (URL-encoded, & escaped as &amp;) -->
           <a
-            href="https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz"
+            href="https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhero_button"
             target="_blank"
             rel="noopener"
             class="play-button"
           >
             Λήψη από Google Play
           </a>
+
+          <!-- Secondary action: browse every question online (internal link to the hub page) -->
+          <a href="/erotiseis/" class="hero-secondary-link">Δες τις ερωτήσεις online</a>
         </div>
 
         <div class="hero-image">
-          <img src="images/banner.png" alt="Operator Exam Quiz εφαρμογή" />
+          <!-- Above the fold: loads eagerly (no lazy loading) -->
+          <img
+            src="/images/banner.png"
+            alt="Εξάσκηση χειριστών μηχανημάτων: εξάσκηση ανά κεφάλαιο και προσομοίωση τελικού τεστ"
+            width="512"
+            height="250"
+          />
         </div>
       </div>
     </header>
@@ -92,7 +185,7 @@
               <h3>Offline λειτουργία</h3>
               <p>
                 Η εφαρμογή λειτουργεί χωρίς σύνδεση στο Internet. Δεν απαιτείται
-                API ή λογαριασμός για τη χρήση της.
+                λογαριασμός για τη χρήση της.
               </p>
             </article>
 
@@ -106,17 +199,70 @@
         </div>
       </section>
 
+      <!-- Chapter list: the content between the markers is generated by tools/build_pages.py -->
+      <section class="section home-chapters" id="kefalaia">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ΕΡΩΤΗΣΕΙΣ ΑΝΑ ΚΕΦΑΛΑΙΟ</p>
+
+            <h2>Δες όλες τις ερωτήσεις online</h2>
+
+            <p>
+              Κάθε κεφάλαιο με όλες τις ερωτήσεις του και τις σωστές απαντήσεις.
+              Διάβασε εδώ και εξασκήσου με χρονόμετρο στην εφαρμογή.
+            </p>
+          </div>
+
+          <div class="chapter-groups">
+          <!-- CHAPTERS:START -->
+          <div class="chapter-group">
+            <h3>Γενικές ερωτήσεις</h3>
+            <ul class="chapter-list">
+            <li><a href="/erotiseis/genikes-erotiseis-xamilis-dyskolias/">Γενικές ερωτήσεις χαμηλής δυσκολίας</a><span>71 ερωτήσεις, 6 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/genikes-erotiseis-metrias-dyskolias/">Γενικές ερωτήσεις μέτριας δυσκολίας</a><span>67 ερωτήσεις, 11 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/genikes-erotiseis-ypsilis-dyskolias/">Γενικές ερωτήσεις υψηλής δυσκολίας</a><span>50 ερωτήσεις, 18 στο τελικό τεστ</span></li>
+            </ul>
+          </div>
+          <div class="chapter-group">
+            <h3>Ειδικότητες</h3>
+            <ul class="chapter-list">
+            <li><a href="/erotiseis/eidikotita-1-ekskafi-xomatourgika/">Ειδικότητα 1 — Εκσκαφή / χωματουργικά</a><span>32 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-2-anypsosi-metafora-fortion/">Ειδικότητα 2 — Ανύψωση/μεταφορά φορτίων ή προσώπων</a><span>37 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-3-odostrosia/">Ειδικότητα 3 — Εργασίες οδοστρωσίας</a><span>15 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-4-eksypiretisi-odon-aerodromion/">Ειδικότητα 4 — Εξυπηρέτηση οδών/αεροδρομίων</a><span>22 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-5-ypogeia-erga-metalleia/">Ειδικότητα 5 — Υπόγεια έργα/μεταλλεία</a><span>27 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-6-ergasies-elksis/">Ειδικότητα 6 — Εργασίες έλξης</a><span>15 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-7-diatrisi-kopi-edafon/">Ειδικότητα 7 — Διάτρηση/κοπή εδαφών</a><span>11 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/eidikotita-8-anypsosi-eidikon-ergasion/">Ειδικότητα 8 — Ανύψωση ειδικών εργασιών</a><span>42 ερωτήσεις, 5 στο τελικό τεστ</span></li>
+            </ul>
+          </div>
+          <div class="chapter-group">
+            <h3>Λοιπά θέματα</h3>
+            <ul class="chapter-list">
+            <li><a href="/erotiseis/asfaleia-ergasias/">Ασφάλεια εργασίας</a><span>11 ερωτήσεις, 2 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/oikonomika-themata/">Οικονομικά θέματα</a><span>12 ερωτήσεις, 1 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/gnosi-ypologiston/">Γνώση Η/Υ</a><span>19 ερωτήσεις, 1 στο τελικό τεστ</span></li>
+            <li><a href="/erotiseis/texniki-orologia-agglika/">Τεχνική ορολογία (Αγγλικά)</a><span>17 ερωτήσεις, 1 στο τελικό τεστ</span></li>
+            </ul>
+          </div>
+          <!-- CHAPTERS:END -->
+          </div>
+        </div>
+      </section>
+
       <section class="section exam-section">
         <div class="container">
           <div class="exam-content">
             <div>
-              <p class="eyebrow">FINAL EXAM</p>
+              <!-- Greek wording matches the app button ("Τελικό Τεστ") and what people search for -->
+              <p class="eyebrow">ΤΕΛΙΚΟ ΤΕΣΤ</p>
 
               <h2>Προσομοίωση τελικής εξέτασης</h2>
 
               <p>
                 Δοκίμασε τις γνώσεις σου σε μια ολοκληρωμένη προσομοίωση
-                εξέτασης με χρονικό περιορισμό.
+                εξέτασης με χρονικό περιορισμό, όπως στις πραγματικές
+                θεωρητικές εξετάσεις.
               </p>
             </div>
 
@@ -146,12 +292,12 @@
           <div class="exam-details">
             <p>
               Οι ερωτήσεις μπορούν να έχουν μία ή περισσότερες σωστές
-              απαντήσεις. Κατά τη διάρκεια της εξέτασης μπορείς να περιηγείσαι
+              απαντήσεις. Κατά τη διάρκεια του τεστ μπορείς να περιηγείσαι
               στις ερωτήσεις και να επανεξετάζεις τις απαντήσεις σου.
             </p>
 
             <p>
-              Η κατάσταση της εξέτασης διατηρείται ακόμη και αν η εφαρμογή
+              Η κατάσταση του τεστ διατηρείται ακόμη και αν η εφαρμογή
               μεταφερθεί στο παρασκήνιο ή κλειδώσει η οθόνη.
             </p>
           </div>
@@ -167,24 +313,34 @@
 
             <p>
               Περιηγήσου στο περιβάλλον της εφαρμογής και δες πώς οργανώνεται η
-              εξάσκηση και η εξέταση.
+              εξάσκηση και το τελικό τεστ.
             </p>
           </div>
 
+          <!-- Below the fold: loading="lazy" defers these ~300 KB until the user scrolls near them -->
           <div class="screenshots">
             <img
-              src="images/screen1.png"
-              alt="Operator Exam Quiz - οθόνη εφαρμογής"
+              src="/images/screen1.png"
+              alt="Operator Exam Quiz – αρχική οθόνη της εφαρμογής"
+              width="756"
+              height="1568"
+              loading="lazy"
             />
 
             <img
-              src="images/screen2.png"
-              alt="Operator Exam Quiz - οθόνη εξέτασης"
+              src="/images/screen2.png"
+              alt="Operator Exam Quiz – οθόνη τελικού τεστ"
+              width="756"
+              height="1568"
+              loading="lazy"
             />
 
             <img
-              src="images/screen3.png"
-              alt="Operator Exam Quiz - οθόνη ερωτήσεων"
+              src="/images/screen3.png"
+              alt="Operator Exam Quiz – οθόνη ερωτήσεων"
+              width="756"
+              height="1568"
+              loading="lazy"
             />
           </div>
         </div>
@@ -204,8 +360,8 @@
 
           <p>
             Μπορείς να μελετήσεις ανά κεφάλαιο, να απαντήσεις ερωτήσεις και να
-            χρησιμοποιήσεις το Final Exam για να προσομοιώσεις μια ολοκληρωμένη
-            εξέταση.
+            χρησιμοποιήσεις το Τελικό Τεστ για να προσομοιώσεις μια
+            ολοκληρωμένη εξέταση.
           </p>
         </div>
       </section>
@@ -259,17 +415,17 @@
             </details>
 
             <details>
-              <summary>Πόσες ερωτήσεις έχει το Final Exam;</summary>
+              <summary>Πόσες ερωτήσεις έχει το Τελικό Τεστ;</summary>
               <p>
-                Το Final Exam περιλαμβάνει 80 ερωτήσεις και έχει χρονικό όριο 90
-                λεπτών.
+                Το Τελικό Τεστ περιλαμβάνει 80 ερωτήσεις και έχει χρονικό όριο
+                90 λεπτών.
               </p>
             </details>
 
             <details>
               <summary>Ποιο είναι το όριο επιτυχίας;</summary>
               <p>
-                Για την ολοκλήρωση του Final Exam απαιτούνται τουλάχιστον 60
+                Για να περάσεις το Τελικό Τεστ χρειάζονται τουλάχιστον 60
                 σωστές απαντήσεις στις 80, δηλαδή 75%.
               </p>
             </details>
@@ -283,8 +439,9 @@
 
           <p>Κατέβασε δωρεάν το Operator Exam Quiz από το Google Play.</p>
 
+          <!-- Different utm_medium than the hero button so you can compare which one converts better -->
           <a
-            href="https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz"
+            href="https://play.google.com/store/apps/details?id=com.foxnks.xeiristisexamquiz&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dbottom_cta"
             target="_blank"
             rel="noopener"
             class="play-button"
@@ -295,59 +452,50 @@
       </section>
     </main>
 
-   <footer>
-
-    <div class="container footer-content">
-
+    <footer>
+      <div class="container footer-content">
         <div>
-            <strong>Operator Exam Quiz</strong>
+          <strong>Operator Exam Quiz</strong>
 
-            <p>
-                Εφαρμογή προετοιμασίας για θεωρητικές εξετάσεις
-                χειριστών μηχανημάτων έργου.
-            </p>
+          <p>
+            Εφαρμογή προετοιμασίας για θεωρητικές εξετάσεις χειριστών
+            μηχανημάτων έργου.
+          </p>
 
-            <p>
-                Δημιουργός: Νίκος Ξαπλαντέρης
-            </p>
+          <p>Δημιουργός: Νίκος Ξαπλαντέρης</p>
         </div>
 
+        <!-- Footer links: one per line on all screen sizes -->
         <div class="footer-links">
+          <a href="mailto:xaplanterisnikos@gmail.com">Email</a>
 
-            <a
-                href="mailto:xaplanterisnikos@gmail.com">
-                Email
-            </a>
+          <a
+            href="https://github.com/XaplanterisNikos/xaplanterisnikos.github.io"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
 
-            <a
-                href="https://github.com/XaplanterisNikos/xaplanterisnikos.github.io"
-                target="_blank"
-                rel="noopener">
-                GitHub
-            </a>
+          <a
+            href="https://www.linkedin.com/in/nick-xaplanteris/"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
 
-            <a
-                href="https://www.linkedin.com/in/nick-xaplanteris/"
-                target="_blank"
-                rel="noopener">
-                LinkedIn
-            </a>
-
-            <a
-                href="https://github.com/XaplanterisNikos/operator-exam-quiz"
-                target="_blank"
-                rel="noopener">
-                App GitHub Repository
-            </a>
-
+          <a
+            href="https://github.com/XaplanterisNikos/operator-exam-quiz"
+            target="_blank"
+            rel="noopener"
+          >
+            App GitHub Repository
+          </a>
         </div>
+      </div>
 
-    </div>
-
-    <div class="copyright">
-        © 2026 Νίκος Ξαπλαντέρης · Operator Exam Quiz
-    </div>
-
-</footer>
+      <div class="copyright">© 2026 Νίκος Ξαπλαντέρης · Operator Exam Quiz</div>
+    </footer>
   </body>
 </html>
